@@ -17,29 +17,28 @@ const request = ({ navigation }) => {
         <View style={styles.mini_logo}>
           <Image source={require('../assets/logo_mini.png')}/>
         </View>
-      <View>
-          <Text style={styles.title}>{"Zgłoś znalezione zwierzę"}</Text>
+      <View style={{width: '100%', justifyContent: 'center', alignItems: 'center'}}>
+          <Text style={styles.title}>{"Report an animal found"}</Text>
         </View>
         <View style={styles.radio}>
           <RadioButton.Item
           value="first"
           status={ cheked === 'first' ? 'checked' : 'unchecked' }
           onPress={() => setChecked('first')}
-          label="Zwierzę domowe"
+          label="Pet"
           />
           <RadioButton.Item
           value="second"
           status={ cheked === 'second' ? 'checked' : 'unchecked' }
           onPress={() => setChecked('second')}
-          label="Dzikie zwierzę"
+          label="Wild animal"
           />
         </View>
 
-        <TextInput style={styles.input} placeholder='Czy miał obrożę z imieniem?'/>
-        <TextInput style={styles.input} placeholder='Podaj miejsce, w którym go spotkałeś'/>
-        <TextInput style={styles.input} placeholder='Opisz wygląd'/>
-        <TextInput style={styles.input} placeholder='Jakie miał cechy charakterystyczne?'/>
-        <View style={{justifyContent: 'center', alignItems: 'center'}}><TouchableOpacity style={styles.send}><Text style={styles.send_text}>{"Wyślij zgłoszenie"}</Text></TouchableOpacity></View>
+        <TextInput style={styles.input} placeholder='Did it have a collar with a name on it?'/>
+        <TextInput style={styles.input} placeholder='Describe the appearance'/>
+        <TextInput style={styles.input} placeholder='What were its characteristics?'/>
+        <View style={{justifyContent: 'center', alignItems: 'center'}}><TouchableOpacity style={styles.send}><Text style={styles.send_text} onPress={() => {navigation.navigate('Menu');}}>{"Send"}</Text></TouchableOpacity></View>
 
       </View>
     </SafeAreaView> 

@@ -78,7 +78,7 @@ export const HamburgerMenu = () => {
             <View style={styles.flex}>
                 <View style={styles.inner}>
                     <TouchableOpacity onPress={() => {navigation.navigate('Menu');}}>
-                        <Text style={[styles.title, { marginBottom: 10, marginLeft: 80, color: 'red' }]}>{"Animals"}</Text>
+                        <Text style={[styles.title, { marginBottom: 10, marginLeft: '40%', color: 'red' }]}>Main</Text>
                     </TouchableOpacity>
                     <Text style={[styles.title, { marginBottom: 10 }]}>{"Animals"}</Text>
                     <TouchableOpacity onPress={() => setShouldShow(!shouldShow)}>
