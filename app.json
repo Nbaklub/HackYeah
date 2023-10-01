@@ -3,6 +3,7 @@
     "name": "Hackyeah",
     "slug": "Hackyeah",
     "version": "1.0.0",
+    "permissions": ["CAMERA_ROLL", "CALENDAR", "LOCATION", "CALL_PHONE"],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -11,18 +12,19 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": ["voip"]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
-    },
+      },
+     },
     "web": {
       "favicon": "./assets/favicon.png"
     }
